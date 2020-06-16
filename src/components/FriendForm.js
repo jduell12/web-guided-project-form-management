@@ -11,7 +11,7 @@ export default function FriendForm(props) {
 
   return (
     // 🔥 STEP 4 - Give the form an `onSubmit` event handler
-    <form className='form container'>
+    <form onSubmit={props.onSubmit} className='form container'>
       <div className='form-group submit'>
         <h2>Add a Friend</h2>
         <button>submit</button>

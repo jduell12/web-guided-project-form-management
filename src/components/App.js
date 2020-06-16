@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid' //creates random ids 
 import Friend from './Friend'
 import FriendForm from './FriendForm'
 
@@ -26,7 +26,7 @@ export default function App() {
   const [friends, setFriends] = useState(initialFriendsList)
 
   // 🔥 STEP 1 - WE NEED STATE TO HOLD ALL VALUES OF THE FORM!
-  const formValues = {} // fix this using the state hook
+  const [formValues, setFormValues] = useState(initialFormValues) // fix this using the state hook
 
   const onInputChange = evt => {
     // 🔥 STEP 8 - IMPLEMENT A CHANGE HANDLER (works for inputs and dropdowns)
@@ -57,6 +57,9 @@ export default function App() {
         // 🔥 STEP 2 - The form component needs its props.
         //    Check implementation of FriendForm
         //    to see what props it expects.
+        values = {formValues}
+        onInputChange = {onInputChange}
+        onSubmit = {onSubmit}
       />
 
       {
