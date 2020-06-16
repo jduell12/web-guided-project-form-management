@@ -11,7 +11,7 @@ export default function FriendForm(props) {
 
   return (
     // 🔥 STEP 4 - Give the form an `onSubmit` event handler
-    <form onSubmit={props.onSubmit} className='form container'>
+    <form onSubmit={onSubmit} className='form container'>
       <div className='form-group submit'>
         <h2>Add a Friend</h2>
         <button>submit</button>
@@ -28,10 +28,12 @@ export default function FriendForm(props) {
               Controlled inputs also need `value` and `onChange` props.
               Inputs render what they're told - their current value comes from app state.
               At each keystroke, a change handler should fire to change app state. */}
+          <input type="text" name="username" value={values.username} onChange={onInputChange} />
         </label>
 
         <label>Email:&nbsp;
           {/* 🔥 STEP 6 - Make an input of type `text` for email. */}
+          <input type="text" name="email" value={values.email} onChange={onInputChange} />
         </label>
 
         {/* ////////// DROPDOWN ////////// */}

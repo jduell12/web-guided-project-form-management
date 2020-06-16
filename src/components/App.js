@@ -41,12 +41,14 @@ export default function App() {
     // 🔥 STEP 9 - IMPLEMENT A SUBMIT HANDLER
 
     // a) don't allow the browser to reload!
+    evt.preventDefault();
     // b) don't allow the submission, if any of the formValues is empty!
     // c) make a new friend object
     //    set up the new friend with the correct attributes
     //    using the information inside the state of the form
     // d) update the list of friends in state with the new friend
     // e) optionally clear the form
+    
   }
 
   return (
