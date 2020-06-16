@@ -23,24 +23,44 @@ export default function FriendForm(props) {
         {/* ////////// TEXT INPUTS ////////// */}
         {/* ////////// TEXT INPUTS ////////// */}
         {/* ////////// TEXT INPUTS ////////// */}
-        <label>Username:&nbsp;
+        <label htmlFor="usernameInput">Username:&nbsp;
           {/* 🔥 STEP 5 - Make an input of type `text` for username.
               Controlled inputs also need `value` and `onChange` props.
               Inputs render what they're told - their current value comes from app state.
               At each keystroke, a change handler should fire to change app state. */}
-          <input type="text" name="username" value={values.username} onChange={onInputChange} />
+          <input 
+            id="usernameInput"
+            type="text" 
+            name="username" 
+            maxLength="100"
+            value={values.username} 
+            onChange={onInputChange} 
+          />
         </label>
 
-        <label>Email:&nbsp;
+        <label htmlFor="emailInput">Email:&nbsp;
           {/* 🔥 STEP 6 - Make an input of type `text` for email. */}
-          <input type="text" name="email" value={values.email} onChange={onInputChange} />
+          <input 
+            id="emailInput"
+            type="email" 
+            name="email" 
+            value={values.email} 
+            onChange={onInputChange} 
+          />
         </label>
 
         {/* ////////// DROPDOWN ////////// */}
         {/* ////////// DROPDOWN ////////// */}
         {/* ////////// DROPDOWN ////////// */}
-        <label>Role:&nbsp;
+        <label htmlFor="roleInput">Role:&nbsp;
           {/* 🔥 STEP 7 - Make dropdown for role. */}
+          <select value={values.role} onChange={onInputChange} id="roleInput" name="role">
+              <option value=''>-- Select an option --</option>
+              <option value='Student'>Student</option>
+              <option value='Alumni'>Alumni</option>
+              <option value='Instructor'>Instructor</option>
+              <option value='Team Lead'>Team Lead</option>
+          </select>
         </label>
       </div>
     </form>
