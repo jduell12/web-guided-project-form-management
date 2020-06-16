@@ -33,8 +33,11 @@ export default function App() {
     // which can change the state of inputs of type text
 
     // a) pull the name of the input from the event object
+    let name = evt.target.name;
     // b) pull the value of the input from the event object
+    let value = evt.target.value;
     // c) set a new state for the whole form
+    setFormValues({...formValues, [name]:value})
   }
 
   const onSubmit = evt => {
