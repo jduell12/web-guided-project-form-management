@@ -55,7 +55,7 @@ export default function App() {
     //    using the information inside the state of the form
     const newFriend = {...formValues, id: uuid()}
     // d) update the list of friends in state with the new friend
-    setFriends(friends => [newFriend, ...friends]);
+    setFriends(friends => [newFriend, ...friends]); //used when new array is based off of old array
     // e) optionally clear the form
     setFormValues(initialFormValues);
     
